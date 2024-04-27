@@ -16,6 +16,7 @@ Class TrackMap () {
 
     //definition: matrix<type, cols, rows>
     //these are typedefs, e.g. typedef Eigen::Matrix<double, DYNAMIC, 1> StateMatrix
+    //these should be PRIVATE to avoid accidental modification
     Eigen::Matrix<double, DYNAMIC, 1> state_matrix; //see SLAM for dummies p.30 for what this looks like. {car_x, car_y, car_heading, cone_x, y, x, y ....}
     Eigen::Matrix<double, DYNAMIC, 3> buffer = {x, y}; //buffer to hold potential cones
 
