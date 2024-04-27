@@ -1,0 +1,25 @@
+// imports
+
+// mapping high level - start here!
+
+//front-end work
+
+    // initialize ROS features (publishers/subscribers) 
+    // take in sensor data synchronously (lidar, svg, pointcloud)
+    // transform data into correct frame of reference
+    // associate new sensor data with old data
+    // pass to backend
+
+
+
+//backend
+
+    // do the EKF step
+        // initialize EKF matrix
+        // take in sensor data
+        // update EKF
+        // output new estimated position data of robot and cones.
+
+# by now we have a good estimate of the robot's position and orientation
+
+// package cone locations and positions of the car into a message to publish. -> waypoint generation (beyond slam)

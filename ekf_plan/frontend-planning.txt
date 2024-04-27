@@ -1,0 +1,43 @@
+
+#include "trackMap.hpp"
+
+int main(object trackMap) {
+    //trackMap contains data recorded from previous timestep
+    Object DataAssociator()
+    DataAssociator DA = new DataAssociator(DataAssociatorMethod)    // create DA based on method (euclidiean, mahalanobis, bhatcharaya)
+    // initialize track frame of reference (map of environment, origin (0,0), position matrix etc.)
+
+    // take in sensor data synchronously (lidar, svg, pointcloud) and transform data into correct frame of reference
+    car_estimated_position = process_incoming_car_data(); // receive car data from sensors and transform it to track frame of reference
+    new_cones_track_frame_data = process_incoming_cone_data(car_estimated_position);   // receive cone data from sensors and transform it to track frame of reference
+    
+    //for each new cone, run EKF step if applicable.
+    
+    for (cone in new_cones_track_frame_data) {
+        // associate new sensor data with old data
+        associate_output = DA.associate(new_cones_track_Frame_data, trackMap);
+
+        // check how many times the cone has been seen (previous times stored in trackMap.buffer) to verify "new" cone is indeed a cone.
+        if (associate_output = true) {
+            EKF_update_function(trackMap, cone)
+        } else {
+            trackMap.buffer.append(cone);
+        }
+        
+    }
+
+
+
+
+}
+
+// general library used to execute and instantiate data associations
+// given a pair of vectors and cov matrix, check if they are the same
+Class Associate() {
+    public
+        virtual std::unique_ptr<dataassociator> associator();
+        int/enum method
+    private
+
+        DataAssociator da;
+}
