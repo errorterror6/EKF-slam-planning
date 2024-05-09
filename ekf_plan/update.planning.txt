@@ -1,0 +1,10 @@
+void EKF_update_function(Trackmap data) {
+
+    pp37 - pp41
+
+    //update current state with odo data (p37)
+    //update from re-observed landmarks (p38)
+
+    //add new landmarks to current state (p40)
+
+}

@@ -2,7 +2,7 @@
 
 #define DYNAMIC -1
 
-
+//see Frontend-planning.txt to see how this class will be used.
 
 class Frontend {
 
@@ -23,8 +23,8 @@ class Frontend {
         void setDataAssociatorType();
 
         //READ SENSOR DATA AND TRANSFORM INTO STANDARD FRAME OF REFERENCE
-        Eigen::Matrix<double, 1, 3> pull_and_process_car_data();
-        Eigen::Matrix<double, DYNAMIC, 3> pull_and_process_cone_data();
+        Eigen::Matrix<double, 1, 3> pull_and_process_car_data(); // see pull_and_process.planning.txt
+        Eigen::Matrix<double, DYNAMIC, 3> pull_and_process_cone_data(); // see pull_and_process.planning.txt
 
         //run EKF step on cones if applicable
         void run_EKF_on_cones();    //see definition below for pseudocode

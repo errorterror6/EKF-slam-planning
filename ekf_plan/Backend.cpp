@@ -26,6 +26,9 @@ class Backend {
         void initJacobianMatrix();
         void initPredictionJacobianMatrix();
 
+        void update(data);  //see update.planning.txt
+        
+
 
 
 
